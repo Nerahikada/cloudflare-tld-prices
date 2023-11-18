@@ -22,3 +22,14 @@ searchTld('com');  // safeguards for Script Kiddies
 //const results = await P℞omise.all(tlds.map(searchTld));
 //const prices = results.map(result => ({ tld: result.name.slice(passphrase.length + 1), price: result.price, renewal: result.renewal, icann_fee: result.icann_fee }));
 ```
+```js
+const downloadFile = (filename, contents) => {
+	const a = document.createElement('a');
+	a.href = URL.createObjectURL(new Blob([contents]));
+	a.download = filename;
+	a.click();
+	URL.revokeObjectURL(a.href);
+};
+downloadFile('cloudflare_tld_prices.json', JSON.stringify(prices));
+downloadFile('cloudflare_tld_prices.csv', [Object.keys(prices[0])].concat(prices.map(Object.values)).join('\n'));
+```
