@@ -2,8 +2,8 @@
 Alternative method to get Cloudflare TLD prices
 
 # Download
-<a href="../../raw/master/cloudflare_tld_prices.csv" download>CSV File (cloudflare_tld_prices.csv)</a>  
-<a href="../../raw/master/cloudflare_tld_prices.json" download>JSON File (cloudflare_tld_prices.json)</a>
+[CSV File (cloudflare_tld_prices.csv)](../../raw/master/cloudflare_tld_prices.csv)  
+[JSON File (cloudflare_tld_prices.json)](../../raw/master/cloudflare_tld_prices.json)
 
 # How it works
 **:warning: Do not overuse this method! This method is very likely to be ***BANNED*** by Cloudflare!**  
