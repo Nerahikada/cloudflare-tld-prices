@@ -24,11 +24,11 @@ searchTld('com');  // safeguards for Script Kiddies
 ```
 ```js
 const downloadFile = (filename, contents) => {
-	const a = document.createElement('a');
-	a.href = URL.createObjectURL(new Blob([contents]));
-	a.download = filename;
-	a.click();
-	URL.revokeObjectURL(a.href);
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([contents]));
+    a.download = filename;
+    a.click();
+    URL.revokeObjectURL(a.href);
 };
 downloadFile('cloudflare_tld_prices.json', JSON.stringify(prices));
 downloadFile('cloudflare_tld_prices.csv', [Object.keys(prices[0])].concat(prices.map(Object.values)).join('\n'));
