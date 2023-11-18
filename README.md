@@ -1,14 +1,14 @@
 # cloudflare-tld-prices
-Alternative method to get Cloudflare's TLD prices
+Alternative method to get Cloudflare TLD prices
 
 # Download
 TODO
 
 # How it works
 **:warning: Do not overuse this method! This method is very likely to be ***BANNED*** by Cloudflare!**  
-I recommend downloading pre-dumped files if possible.
+I recommend that you download predumped files if possible.
 
-Login to Cloudflare, open the Developer Tools in your browser and execute the following code:
+Log in to Cloudflare, open the Developer Tools in your browser, and run the following code:
 ```js
 const tag = (await (await fetch('https://dash.cloudflare.com/api/v4/system/bootstrap')).json()).result.data.data.user.primary_account_tag;
 const tlds = (await (await fetch(`https://dash.cloudflare.com/api/v4/accounts/${tag}/registrar/domains/supported_tlds`)).json()).result.tlds;
