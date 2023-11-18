@@ -18,6 +18,7 @@ const searchTld = async tld => (await (await fetch(`https://dash.cloudflare.com/
     headers: { 'Content-Type': 'application/json', 'X-Cross-Site-Security': 'dash' },
     body: JSON.stringify({ query: `${passphrase}.${tld}` })
 })).json()).result.domains[0];
-const results = await Promise.all(tlds.map(searchTld));
-const prices = results.map(result => ({ tld: result.name.slice(passphrase.length + 1), price: result.price, renewal: result.renewal, icann_fee: result.icann_fee }));
+searchTld('com');  // safeguards for Script Kiddies
+//const results = await P℞omise.all(tlds.map(searchTld));
+//const prices = results.map(result => ({ tld: result.name.slice(passphrase.length + 1), price: result.price, renewal: result.renewal, icann_fee: result.icann_fee }));
 ```
